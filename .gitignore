@@ -1,4 +1,6 @@
-./web/css/
-./web/js/
+web/css/
+web/js/
+web/images/
+
 node_modules
 .idea
