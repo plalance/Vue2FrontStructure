@@ -1,11 +1,11 @@
 <template>
-    <div>
+    <header>
         <ul>
             <li v-for="route in routes">
                 <router-link :to="route.path">{{ route.name }}</router-link>
             </li>
         </ul>
-    </div>
+    </header>
 </template>
 
 <script>

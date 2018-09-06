@@ -1,10 +1,9 @@
 <template>
     <div>
         <vheader></vheader>
-        <h2>App</h2>
-        <div class="app__page">
+        <main class="app__page">
             <router-view></router-view>
-        </div>
+        </main>
     </div>
 </template>
 
@@ -12,19 +11,22 @@
     import Header from './components/Header';
     export default {
         name: 'App',
+        components: {
+            vheader: Header
+        },
         data: function () {
             return {
             }
         },
-        components: {
-            vheader: Header
-        },
+        computed: {},
         created() {
         },
         beforeMount() {
         },
         mounted() {
         },
-        computed: {},
+        methods : {
+
+        }
     };
 </script>
