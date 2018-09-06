@@ -11,6 +11,7 @@ const router = new VueRouter({
             name: 'home',
             meta: {
                 title: 'Accueil',
+                admin: false
             },
             component: require('../Pages/Home.vue'),
         },
@@ -19,21 +20,39 @@ const router = new VueRouter({
             name: 'foo',
             meta: {
                 title: 'Foo',
+                admin: false
             },
             component: require('../Pages/Foo.vue'),
+        },
+        {
+            path: '/admininistration',
+            name: 'admininistration',
+            meta: {
+                title: 'Administration',
+                admin: true
+            },
+            component: require('../Pages/Administration/Admin.vue'),
         }
     ]
 });
 
+function goToPage(next, to){
+    document.title = to.meta.title;
+    next();
+}
+
 router.beforeEach((to, from, next) => {
-    // Titre de l'onglet
-   document.title = to.meta.title;
-   next();
-    // if ( from.name == 'About' ) {
-    //     next(false);
-    // } else {
-    //     next();
-    // }
+
+   if(to.meta.admin === true){
+       console.log("Admin Bloqué, voir la configuration");
+       if(configuration.MODE_ADMIN){
+          goToPage(next, to);
+       }else {
+           next('/');
+       }
+   }else {
+       goToPage(next, to);
+   }
 });
 
 global.router = router;
