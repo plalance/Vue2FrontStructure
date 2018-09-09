@@ -4,11 +4,16 @@ const state = {
     todos: [{
         name: 'Super tache',
         author: 'Paul'
-    }]
+    },
+        {
+            name: 'Tache 2',
+            author: 'Super autheur'
+        }
+    ]
 };
 
 const mutations = {
-    ADD_TODO: (state, todo)=>{
+    ADD_TODO: (state, todo) => {
         state.todos.push({
             name: todo.name,
             author: todo.author

@@ -1,22 +1,18 @@
 <template>
     <div>
-        <vheader></vheader>
-        <main class="app__page">
-            <router-view></router-view>
-        </main>
+        <h1>Les taches</h1>
+        <todo v-for="todo in todos" :name="todo.name" :author="todo.author"></todo>
     </div>
 </template>
 
 <script>
-    import Header from './Components/Header';
     import { mapGetters } from 'vuex'
-    import Store from './Store';
+    import Todo from '../Components/Todo'
 
     export default {
-        name: 'App',
-        store: Store,
+        name: 'Todos',
         components: {
-            vheader: Header
+            Todo
         },
         data() {
             return {

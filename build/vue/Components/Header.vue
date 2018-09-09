@@ -11,8 +11,8 @@
 <script>
     export default {
         name: 'Header',
-        data: function () {
-            return {
+        data() {
+            return{
                 routes: router.options.routes
             }
         }

@@ -25,6 +25,15 @@ const router = new VueRouter({
             component: require('../Pages/Foo.vue'),
         },
         {
+            path: '/todos',
+            name: 'todos',
+            meta: {
+                title: 'Taches',
+                admin: false
+            },
+            component: require('../Pages/TodosPage.vue'),
+        },
+        {
             path: '/admininistration',
             name: 'admininistration',
             meta: {
