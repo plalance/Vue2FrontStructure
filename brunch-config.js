@@ -36,7 +36,7 @@ exports.config = {
         babel: {},
         copycat:{
             "images": ["./build/images"],
-            "js": ['./node_modules/jquery/dist/jquery.slim.js'],
+            // "js": ['./node_modules/jquery/dist/jquery.slim.js'],
             verbose : false, //shows each file that is copied to the destination directory
             onlyChanged: true //only copy a file if it's modified time has changed (only effective when using brunch watch)
         },
@@ -50,11 +50,6 @@ exports.config = {
                     DEBUG: true
                 }
             }
-        },
-        // Globales se déclarent ic ou dans les fichiers js avec import ... from '...'
-        globals: {
-            $: 'jquery',
-            jQuery: 'jquery'
         }
     }
 };

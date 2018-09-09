@@ -1,6 +1,8 @@
-exports.config = {
+let config = {
     DEBUG: true,
     ROOT_DIR: "/",
     ASSETS_DIR: "/",
-    MODE_ADMIN: false
+    MODE_ADMIN: true
 };
+
+export default config;
