@@ -1,12 +1,16 @@
 import Vue from 'vue';
-
+// Promises for VueX + VueX
+import 'es6-promise/auto'
+import VueX from 'vuex';
+// Router
 import router from './Router/router'
-
+// Axios = easy http requests
 import axios from "axios";
 import VueAxios from 'vue-axios';
+// Lodash = Easy operations on js objects
 import VueLodash from 'vue-lodash';
 
-Vue.use(VueAxios, axios, VueLodash);
+Vue.use(VueX, VueAxios, axios, VueLodash);
 
 window.Vue = Vue;
 

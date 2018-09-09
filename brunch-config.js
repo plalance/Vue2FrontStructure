@@ -34,11 +34,6 @@ exports.config = {
     },
     plugins: {
         babel: {},
-        sass: {
-            options: {
-                precision: 8
-            }
-        },
         copycat:{
             "images": ["./build/images"],
             "js": ['./node_modules/jquery/dist/jquery.slim.js'],

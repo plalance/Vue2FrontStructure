@@ -8,17 +8,25 @@
 </template>
 
 <script>
-    import Header from './components/Header';
+    import Header from './Components/Header';
+    import Store from './Store';
+    import { mapGetters } from 'vuex'
+
     export default {
         name: 'App',
+        store: Store,
         components: {
             vheader: Header
         },
-        data: function () {
+        data() {
             return {
             }
         },
-        computed: {},
+        computed: {
+            ...mapGetters([
+                "todos"
+            ])
+        },
         created() {
         },
         beforeMount() {
