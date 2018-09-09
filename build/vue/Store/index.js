@@ -22,7 +22,10 @@ const mutations = {
 };
 
 const getters = {
-    todos: (state) => state.todos
+    todos: (state) => state.todos,
+    lastTodo: (state) => {
+        return state.todos.length > 0 ? state.todos[state.todos.length-1] : null
+    },
 };
 
 
