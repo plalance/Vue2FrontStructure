@@ -18,7 +18,13 @@ const mutations = {
             name: todo.name,
             author: todo.author
         })
-    }
+    },
+    EDIT_TODO: (state, todo) => {
+        state.todos.push({
+            name: todo.name,
+            author: todo.author
+        })
+    },
 };
 
 const getters = {

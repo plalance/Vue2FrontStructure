@@ -9,7 +9,6 @@
 
 <script>
     import Header from './Components/Header';
-    import { mapGetters } from 'vuex'
     import Store from './Store';
 
     export default {
@@ -23,9 +22,6 @@
             }
         },
         computed: {
-            ...mapGetters([
-                "todos"
-            ])
         },
         created() {
         },
