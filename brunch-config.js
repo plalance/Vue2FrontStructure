@@ -3,7 +3,7 @@
 exports.config = {
     paths: {
         'public': 'web',
-        'watched': ['build/']
+        'watched': ['build']
     },
     conventions: {
         'assets': /^build\/assets/
@@ -16,9 +16,7 @@ exports.config = {
             }
         },
         stylesheets: {
-            joinTo: {
-                'css/main.css' : 'build/scss/main.scss'
-            }
+            joinTo: 'css/app.css'
         },
         templates: {
             joinTo: 'js/app.js'
@@ -27,6 +25,9 @@ exports.config = {
     modules: {
         autoRequire: {
             'app.js': ['build/main.js']
+        },
+        sass:{
+            mode: 'native'
         }
     },
     npm: {
@@ -39,9 +40,6 @@ exports.config = {
             // "js": ['./node_modules/jquery/dist/jquery.slim.js'],
             verbose : false, //shows each file that is copied to the destination directory
             onlyChanged: true //only copy a file if it's modified time has changed (only effective when using brunch watch)
-        },
-        postcss: {
-            modules: true,
         },
         uglify: {
             mangle: false,

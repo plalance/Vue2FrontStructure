@@ -1,13 +1,9 @@
-@import "./components/colors";
-@import "./components/header";
+@import "./header";
 
 body {
   margin: 0;
-  // hgauteur pour scroll // ScrollMagic
-  height: 1000px;
 }
 
-#svg_test {
-  position: sticky;
-  top: 0;
+#app{
+  height: 100%;
 }

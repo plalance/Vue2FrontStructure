@@ -17,10 +17,10 @@ function goToPage(next, to){
 router.beforeEach((to, from, next) => {
 
    if(to.meta.admin === true){
-       console.log("Admin Bloqué, voir la configuration");
        if(configuration.MODE_ADMIN){
           goToPage(next, to);
        }else {
+           console.log("Admin Bloqué, voir la configuration");
            next('/');
        }
    }else {
