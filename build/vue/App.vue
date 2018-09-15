@@ -2,7 +2,9 @@
     <div id="app">
         <vheader></vheader>
         <main class="app__page">
-            <router-view></router-view>
+            <transition name="slide">
+                <router-view></router-view>
+            </transition>
         </main>
     </div>
 </template>

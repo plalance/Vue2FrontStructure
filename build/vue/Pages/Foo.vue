@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div style="background: blue;">
         <h1>Page Vue: FOO</h1>
     </div>
 </template>

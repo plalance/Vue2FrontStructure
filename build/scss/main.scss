@@ -2,8 +2,34 @@
 
 body {
   margin: 0;
+  overflow: hidden;
+}
+#app{
+  height: 100vh;
+}
+.app{
+  &__page{
+    height: 100%;
+    & > div{
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      padding-top: 40px;
+      box-sizing: border-box;
+    }
+  }
 }
 
-#app{
-  height: 100%;
+.slide-leave-active,
+.slide-enter-active {
+  transition: 0.3s cubic-bezier(.3,.42,0,1) transform
+}
+.slide-enter {
+  //transform: translate(0 , 100%);
+  transform: scale(0);
+}
+.slide-leave-to {
+  //transform: translate(0 , -100%);
+  transform: scale(1);
 }

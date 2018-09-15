@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div style="background: yellow;">
         <h1>Les taches</h1>
         <todo v-for="todo in todos" :name="todo.name" :author="todo.author"></todo>
     </div>

@@ -1,8 +1,9 @@
 header {
   position: sticky;
   top: 0;
-  background-color: rgba(25, 25, 25, 0.9);
-  
+  background-color: rgba(25, 25, 25, 0.33);
+  z-index: 50;
+
   ul {
     display: flex;
     flex-direction: row;

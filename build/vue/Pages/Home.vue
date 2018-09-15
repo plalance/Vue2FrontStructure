@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div style="background: red;">
         <h1>Home</h1>
         <div v-if="lastTodo !== null">
             <p>Dernière Todo:</p>
