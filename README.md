@@ -166,21 +166,17 @@ La configuration principale de l'applciation Vue se fait dans le fichier config.
 | :------------ |:-------------: |
 | MODE_DEBUG    | Affiche ou non les logs de console|
 | MODE_ADMIN | Non utilisé sur ce projet, permet la restrication a certaines routes dans le vue-router|
-|SERIALIZATION_BACK_URL| Url du Back-End "serialization" en Java |
 |API_URLS|Tableau d'objets JS des codes de service liés aux URL pour les appels backend|
-|DATAMATRIX_API_URL|URL du service datamatrix Node.js ou java, exemple : 'http://127.0.0.1:2000/datamatrix/decode/'|
 |BASE_URL|Permet de définir l'URL de base sur lequel Vue s'appuie pour les chemins d'images.|
  
 Format pour un url d'api dans API_URLS:
 
     {
-        G110: '/singlePack/g110Verify',
-        G120: '/singlePack/g120Dispense',
-        G121: '/singlePack/g121UndoDispense',
-        G122: '/singlePack/g122DispenseManualEntry',
+        CODE: '/webapi/examplemethod',
+        CODE2: '/webapi/examplemethod2',
         ...
         ...
-        PING: '/singlePack/ping'
+        PING: '/webapi/ping'
     } 
     
 ## Le Store VueX
@@ -347,22 +343,15 @@ Il affichera donc "Vérification" (voir exemple de fichier de traduction ci dess
           "trads": {
             "api_choices": [
               {
-                "name": "Vérification",
-                "code": "G110"
+                "name": "Exemple de service",
+                "code": "AAX2Z3"
               },
-              {
-                "name": "Distribution",
-                "code": "G120",
-                "codeUndo": "G121",
-                "codeManual": "G122",
-                "codeUndoManual": "G123"
-               }
                ...
             ],
             "routes": {
               "home": "Accueil",
-              "singlepack": "Traitement unitaire",
-              "bulk": "Traitement par lot"
+              "foo": "Page : Foo",
+              "Settings": "Page : Paramètres"
               ...
             },
             "interface": {
@@ -380,18 +369,10 @@ Il affichera donc "Vérification" (voir exemple de fichier de traduction ci dess
             },
             "forms": {
               "service_selection": "Choix du service",
-              "singlepack": {
-                "product_code": "Code produit",
-                "pack_serialnumber": "Numéro de l'article",
-                "batch_id": "Identifiant du lot",
-                "batch_expedition_date": "Date d'expédition du lot (JJ/MM/AAAA)"
+              "form__item": {
+                "product_code": "Code produit"
               }
             },
-            "nvms_codes": {
-              "NMVS_SUCCESS": "Opération effectuée avec succès.",
-              "NMVS_TI_AU_01": "Erreur NMVS : L'authentification à échoué.",
-               ...
-            }
           }
         }
     
@@ -402,15 +383,9 @@ Les services d'API listés dans l'application sont ceux définit dans les fichie
 Si les services ne sont aps définis dans ces fichiers, l'application ne fonctionnepa, car le tabelau d'objet API_CHOICES est tiré du json fr.json parsé.
 
 Format pour un service dans api_choices: 
-La génération des choix "manual", "undo" est automatique selon la structure de l'objet.
-Si codeUndo n'est pas présent, l'utilisateur ne voit pas l'option "Undo" dans la catégorie de service.
-
     {
         name: 'Example of service',
-        code: 'G120',
-        codeManual: 'G122',
-        codeUndo: 'G121',
-        codeUndoManual: 'G125'
+        code: 'AAX23',
     }
 
 Implémenter le même service dans le ficher en.json pour que tout fonctionne correctement en front.
