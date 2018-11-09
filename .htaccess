@@ -1,0 +1,5 @@
+﻿# Restriction des adresses IP
+# Ordre de priorité des instructions : refuser puis autoriser
+Require local
+Require ip 92.90.19.27
+#Pour ajouter une IP autorisée : "Require ip 92.90.19.27"
