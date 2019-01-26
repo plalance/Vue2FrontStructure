@@ -1,5 +1,6 @@
 <template>
     <div class="todo">
+        <p>TOT V2</p>
         <p>Titre : {{ todoClone.name }}</p>
         <p>Auteur : {{ todoClone.author }}</p>
     </div>
