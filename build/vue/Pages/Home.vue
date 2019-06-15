@@ -1,6 +1,6 @@
 <template>
     <div style="background: red;">
-        <h1>Home NEW VERSION</h1>
+        <h1>Home NEW VERSION 15/06</h1>
         <div v-if="lastTodo !== null">
             <p>Dernière Todo:</p>
             <todo :name="lastTodo.name" :author="lastTodo.author"></todo>
