@@ -14,6 +14,7 @@ Vue.use(VueX, VueAxios, axios, VueLodash);
 
 // tititie
 for(var i = 0; i < 10; i++){
+    console.log("toto");
 }
 
 window.Vue = Vue;
