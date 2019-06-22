@@ -12,6 +12,10 @@ import VueLodash from 'vue-lodash';
 
 Vue.use(VueX, VueAxios, axios, VueLodash);
 
+// tititie
+for(var i = 0; i < 10; i++){
+}
+
 window.Vue = Vue;
 
 new Vue({
