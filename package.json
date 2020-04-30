@@ -9,7 +9,7 @@
   "dependencies": {
     "axios": "^0.16.2",
     "gsap": "^2.0.2",
-    "jquery": "^3.3.1",
+    "jquery": "^3.5.0",
     "jquery.2": "^1.0.0",
     "lodash": "^4.17.4",
     "sass-brunch": "^2.10.7",
